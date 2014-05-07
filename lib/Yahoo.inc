@@ -785,7 +785,7 @@ class YahooApplication {
 
         $client = new OAuthClient($this->consumer, $this->token);
 
-        $request_url = sprintf("http://%s/v1/yql",$YahooConfig["QUERY_WS_HOSTNAME"]);
+        $request_url = sprintf("https://%s/v1/yql",$YahooConfig["QUERY_WS_HOSTNAME"]);
         $params = array('q' => $yql, 'format' => 'json', 'env' => 'http://datatables.org/alltables.env');
 
         if(!is_null($env)) {
